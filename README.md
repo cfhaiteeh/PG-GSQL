@@ -5,4 +5,4 @@ This is a PyTorch implementation of the PG-GSQL in our COLING 2020 paper "[PG-GS
 ### Run SParC experiment
 
 #### Requirements
-You can refer to `requirements.txt`
+You can refer to `requirements.txt` 
