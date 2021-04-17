@@ -192,7 +192,7 @@ python-slugify==3.0.6
 python3-openid==3.1.0
 pytz==2017.3
 PyWavelets==0.5.2
-PyYAML==5.1.2
+PyYAML==5.4
 pyzmq==18.1.0
 QtAwesome==0.4.4
 qtconsole==4.3.1
