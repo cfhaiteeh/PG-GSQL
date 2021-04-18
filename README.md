@@ -21,16 +21,19 @@ Train `sh ./run_sparc_pg_gsql.sh`
 Eval `sh ./eva_att.sh`
 
 #### Reproduce our model 
+
 1) You need download our trained model from [there](https://www.aclweb.org/anthology/2020.coling-main.33/) and put it in `/sparc_pg_gsql_paper_save/`
 2) change the `dir` in `evaluate_g.py` and run `sh ./eva_att.sh`
 3) You can get the performance below
 
 #### Reference
+
 `https://github.com/taoyds/sparc`
 `https://github.com/ryanzhumich/editsql`
 `https://github.com/lil-lab/atis`
 
 #### Our paper bibtex
+
 `@inproceedings{wang-etal-2020-pg,
     title = "{PG}-{GSQL}: Pointer-Generator Network with Guide Decoding for Cross-Domain Context-Dependent Text-to-{SQL} Generation",
     author = "Wang, Huajie  and
