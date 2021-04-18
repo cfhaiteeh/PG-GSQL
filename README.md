@@ -5,16 +5,16 @@ This is a PyTorch implementation of the PG-GSQL in our COLING 2020 paper "[PG-GS
 ### Run SParC experiment
 
 ####  Requirements
-You can refer to `requirements.txt` 
+You can refer to `requirements.txt`.
 
 #### Pretrained BERT
-You need download the pretrained BERT from [there](https://drive.google.com/file/d/1-tFqErsoMZYrPdiyozFyxXGhzvgbP4S2/view?usp=sharing) and put them in `/model/bert/data/`
+You need download the pretrained BERT from [here](https://drive.google.com/file/d/1-tFqErsoMZYrPdiyozFyxXGhzvgbP4S2/view?usp=sharing) and put them in `/model/bert/data/`.
 
 ####  Dataset
 ##### Two options are available
 1) You can get dataset from  `https://github.com/taoyds/sparc` and put them in the `/data/` folder
 , then run the `python3 preprocess_data.py --dataset sparc` to preprocess the data.
-2) You can use our preprocessed data and  download the database from [there](https://drive.google.com/file/d/1mHeGXXEj2BIo59TzPqMT5JrL2lxGdQIn/view?usp=sharing).
+2) You can use our preprocessed data and  download the database from [here](https://drive.google.com/file/d/1mHeGXXEj2BIo59TzPqMT5JrL2lxGdQIn/view?usp=sharing).
 #### Run model
 Train `sh ./run_sparc_pg_gsql.sh`
 
@@ -22,8 +22,8 @@ Eval `sh ./eva_att.sh`
 
 #### Reproduce our model 
 
-1) You need download our trained model from [there](https://drive.google.com/file/d/18BwkTr2F7OeoL-R0X-Nl2qSvVs11QMFM/view?usp=sharing) and put it in `/sparc_pg_gsql_paper_save/`
-2) change the `dir` in `evaluate_g.py` and run `sh ./eva_att.sh`
+1) You need download our trained model from [here](https://drive.google.com/file/d/18BwkTr2F7OeoL-R0X-Nl2qSvVs11QMFM/view?usp=sharing) and put it in `/sparc_pg_gsql_paper_save/`.
+2) change the `dir` in `evaluate_g.py` and run `sh ./eva_att.sh`.
 3) You can get the performance on the dev set.
 
 
