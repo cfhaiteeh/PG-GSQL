@@ -45,7 +45,6 @@ def cal_where(sql_toks,column_names):
     whe1_cols = []
     for tk in sql_toks:
         tk = tk.lower()
-    
         if flag == 1 and tk in CLAUSE_KEYWORDS:
             break
         if tk == 'where' and flag == 0:
@@ -56,7 +55,7 @@ def cal_where(sql_toks,column_names):
     return num, whe1_cols
 
 def cal_from(sql_toks,table_names):
-   
+
     nc = [tk.lower() for tk in table_names]
 
     num = 0
@@ -64,12 +63,43 @@ def cal_from(sql_toks,table_names):
     from_tabs = []
     for tk in sql_toks:
         tk = tk.lower()
-    
+
         if flag == 1 and tk in CLAUSE_KEYWORDS:
-            break
+            flag=0
         if tk == 'from' and flag == 0:
             flag = 1
         if flag == 1 and (tk in nc ):
             num += 1
             from_tabs.append(tk)
     return num, from_tabs
+
+
+from nltk import word_tokenize, pos_tag
+from nltk.corpus import wordnet
+from nltk.stem import WordNetLemmatizer
+
+
+def get_raw_list(str):
+    def get_wordnet_pos(tag):
+        if tag.startswith('J'):
+            return wordnet.ADJ
+        elif tag.startswith('V'):
+            return wordnet.VERB
+        elif tag.startswith('N'):
+            return wordnet.NOUN
+        elif tag.startswith('R'):
+            return wordnet.ADV
+        else:
+            return None
+    tokens = word_tokenize(str)
+    tagged_sent = pos_tag(tokens)
+
+    wnl = WordNetLemmatizer()
+    lemmas_sent = []
+    for tag in tagged_sent:
+        wordnet_pos = get_wordnet_pos(tag[1]) or wordnet.NOUN
+        lemmas_sent.append(wnl.lemmatize(tag[0], pos=wordnet_pos))
+
+
+    return lemmas_sent
+
