@@ -12,8 +12,7 @@ You need download the pretrained BERT from [here](https://drive.google.com/file/
 
 ####  Dataset
 ##### Two options are available
-1) You can get dataset from  `https://github.com/taoyds/sparc` and put them in the `/data/` folder
-, then run the `python3 preprocess_data.py --dataset sparc` to preprocess the data.
+1) You can get dataset from  `https://github.com/taoyds/sparc` and put them in the `/data/` folder, then run the `python3 preprocess_data.py --dataset sparc` to preprocess the data.
 2) You can use our preprocessed data and  download the database from [here](https://drive.google.com/file/d/1mHeGXXEj2BIo59TzPqMT5JrL2lxGdQIn/view?usp=sharing).
 #### Run model
 Train `sh ./run_sparc_pg_gsql.sh`
