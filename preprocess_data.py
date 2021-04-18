@@ -573,15 +573,15 @@ def preprocess(dataset):
   if dataset == 'spider':
     spider_dir = 'data/spider'
     database_schema_filename = 'data/spider/tables.json'
-    output_dir = 'spider_data'
+    output_dir = 'data/spider_data'
   elif dataset == 'sparc':
     sparc_dir = 'data/sparc/'
     database_schema_filename = 'data/sparc/tables.json'
-    output_dir = 'sparc_data'
+    output_dir = 'data/sparc_data'
   elif dataset=='cosql':
     cosql_dir = 'data/cosql/'
     database_schema_filename = 'data/cosql/tables.json'
-    output_dir = 'cosql_data'
+    output_dir = 'data/cosql_data'
 
   train_database=[]
   dev_database=[]

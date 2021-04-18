@@ -140,14 +140,5 @@ if __name__=='__main__':
         
 
 
-
-    else:
-        model = model_type(
-            params,
-            data.input_vocabulary,
-            data.output_vocabulary,
-            data.output_vocabulary_schema,
-            data.anonymizer if params.anonymize and params.anonymization_scoring else None)
-        model = model.cuda()
-        evaluate(model, data, params, 'spider_bert_530.4/save_12', split='valid',step=2,first=None)
+    #
 
