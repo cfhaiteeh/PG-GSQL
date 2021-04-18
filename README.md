@@ -4,5 +4,7 @@ This is a PyTorch implementation of the PG-GSQL in our COLING 2020 paper "[PG-GS
 
 ### Run SParC experiment
 
-#### Requirements
+####1. Requirements
 You can refer to `requirements.txt` 
+####2. Dataset
+You can get dataset from  `https://github.com/taoyds/sparc` and put them in the `/data/` floder
